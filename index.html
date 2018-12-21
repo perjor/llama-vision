@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f0eefb">
-    <title>Llama Detector</title>
+    <title>Catalyser v0.01</title>
     <script defer src="lib/tfjs@0.11.7.js"></script>
     <script defer src="lib/mobilenet@0.1.1.js"></script>
-    <script defer src="index.js"></script>
+    <script defer src="main.js"></script>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
+
   <body>
     <div class="page page-intro" id="page-intro">
-      <h1>Llama Vision</h1>
-      <h2>Detect llamas through your camera.</h2>
-      <img class="llama" src="images/llama-lens-right.svg" width="150px" alt="Silhouette of a llama"/>
+      <h1>Catalyser</h1>
+      <h2>Detect cats through your camera.</h2>
+      <img class="llama" src="images/Cat-Face-Lens.svg" width="150px" alt="Silhouette of a llama" />
       <div id="unsupported" class="unsupported">
         <p id="error-msg" class="error"></p>
         <p class="error">Sorry, your web browser does not appear to support our llama detection :(
@@ -28,15 +30,19 @@
       <p>An <a href="https://github.com/poshaughnessy/llama-vision">open source</a> demo by
         <a href="https://peteroshaughnessy.com">Peter O'Shaughnessy</a>,
         <a href="https://samsunginter.net">Samsung Internet</a>.</p>
+      <p>Tweaked for cats by
+        <a href="https://jordypereira.be">Jordy Pereira</a>.
+      </p>
     </div>
     <div class="page page-detector hidden" id="page-detector">
-        <div class="llama-border"></div>
-        <p class="top-msg loading-msg">Warming up...</p>
-        <p class="top-msg detecting-msg">Looking for llamas...</p>
-        <p class="top-msg llama-msg">🎉 OMG it's a llama! 🎉</p>
-        <p class="top-msg badger-msg">Noooo not a badger! 🦡</p>
-        <p class="bottom-msg llama-msg">✨🦙✨</p>
-        <video id="video" autoplay/>
-      </div>
+      <div class="llama-border"></div>
+      <p class="top-msg loading-msg">Warming up...</p>
+      <p class="top-msg detecting-msg">Looking for cats...</p>
+      <p class="top-msg llama-msg">🎉 OMG it's a C A T! 🎉</p>
+      <p class="top-msg badger-msg">Noooo not a badger! 🎉</p>
+      <p class="bottom-msg llama-msg">✨🎉✨</p>
+      <video id="video" autoplay />
+    </div>
   </body>
+
 </html>

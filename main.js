@@ -7,7 +7,7 @@
   const supportedDiv = document.getElementById('supported');
   const unsupportedDiv = document.getElementById('unsupported');
   const errorMsg = document.getElementById('error-msg');
-  const audio = new Audio('audio/llama.mp3');
+  const audio = [new Audio('audio/cat.mp3'), new Audio('audio/kat.mp3'), new Audio('audio/katje.mp3'), new Audio('audio/kitten.mp3'), new Audio('audio/hetiseenkat.mp3')];
 
   let predictionModel = null;
 
@@ -17,22 +17,24 @@
 
       const topResult = predictions[0];
 
-      if (topResult.className === 'llama') {
+      if (topResult.className.includes('cat')) {
 
-        console.log('OMG llama!', topResult);
+        // console.log('OMG cat!', topResult);
         document.body.classList.add('llama');
 
-        audio.play(); // "Llama!"
+        const randomSound = Math.floor(Math.random() * (audio.length - 1))
+
+        audio[randomSound].play(); // "Cat!"
 
       } else if (topResult.className === 'badger') {
 
         // Just a little easter egg ;)
-        document.body.classList.add('badger');        
+        document.body.classList.add('badger');
         document.body.classList.remove('llama');
 
       } else {
 
-        console.log('No llama...', predictions);
+        // console.log('No cat...', predictions);
         document.body.classList.remove('llama', 'badger');
 
       }
